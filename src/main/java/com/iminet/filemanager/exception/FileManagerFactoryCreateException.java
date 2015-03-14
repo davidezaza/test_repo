@@ -1,32 +1,24 @@
 package com.iminet.filemanager.exception;
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The Class FileManagerFactoryCreateException.
  */
 public class FileManagerFactoryCreateException extends Exception {
 
+
 	/** The Constant serialVersionUID. */
-	private static final long serialVersionUID = 3296577756041443417L;
-	
+	private static final long serialVersionUID = 1841457209881679598L;
 	/** The message. */
-	private String message;
+	private static final String MESSAGE = "method not allowed";
 	
 	/**
 	 * Instantiates a new file manager factory create exception.
 	 */
 	public FileManagerFactoryCreateException(){
-		super();
+		super(MESSAGE);
 	}
 	
-	/**
-	 * Instantiates a new file manager factory create exception.
-	 *
-	 * @param message the message
-	 */
-	public FileManagerFactoryCreateException(String message){
-		super(message);
-		this.message=message;
-	}
 
 }

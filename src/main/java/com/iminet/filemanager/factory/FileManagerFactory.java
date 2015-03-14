@@ -6,20 +6,18 @@ import com.iminet.filemanager.exception.FileManagerFactoryCreateException;
 import com.iminet.filemanager.impl.locale.LocaleFileManager;
 import com.iminet.filemanager.impl.remote.RemoteFileManager;
 
-// TODO: Auto-generated Javadoc
+
 /**
  * A factory for creating FileManager objects.
  */
 public class FileManagerFactory {
-	
-	private static final String EXCEPTION_MESSAGE="method not allowed";
 	
 	/**
 	 * Creates a new FileManager object.
 	 *
 	 * @param fileManagerEnum the file manager enum
 	 * @return the i file manager
-	 * @throws Exception 
+	 * @throws FileManagerFactoryCreateException the file manager factory create exception
 	 */
 	public IFileManager createFileManager(final FileManagerEnum fileManagerEnum) throws FileManagerFactoryCreateException{
 		switch(fileManagerEnum){
@@ -30,7 +28,7 @@ public class FileManagerFactory {
 				return new RemoteFileManager();
 				
 		    default:
-		    	throw new FileManagerFactoryCreateException(EXCEPTION_MESSAGE);			
+		    	throw new FileManagerFactoryCreateException();			
 		}
 	}
 
